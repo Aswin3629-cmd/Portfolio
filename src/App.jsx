@@ -4,6 +4,7 @@ import About from './components/About.jsx'
 import Education from './components/Education.jsx'
 import Experience from './components/Experience.jsx'
 import Projects from './components/Projects.jsx'
+import ProofOfWork from './components/ProofOfWork.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
@@ -18,6 +19,7 @@ export default function App() {
         <Education />
         <Experience />
         <Projects />
+        <ProofOfWork />
         <Contact />
       </main>
       <Footer />
