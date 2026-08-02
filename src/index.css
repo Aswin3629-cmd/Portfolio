@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base-900 text-ink-100 font-body antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(45,212,191,0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(255,120,73,0.05), transparent);
+}
+
+::selection {
+  background: rgba(45,212,191,0.3);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #07090d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2733;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2dd4bf55;
+}
+
+:focus-visible {
+  outline: 2px solid #2dd4bf;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-hover {
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.glass-hover:hover {
+  border-color: rgba(45,212,191,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px -14px rgba(45,212,191,0.35);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #2dd4bf, #67e8d1 40%, #ff7849);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

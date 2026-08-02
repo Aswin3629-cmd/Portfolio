@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: aswin3629/portfolio-frontend:latest
+    container_name: portfolio-frontend
+    ports:
+      - '8080:80'
+    restart: unless-stopped
+
+# When the backend/API is added later, uncomment and wire it up:
+#
+#  backend:
+#    build: ./backend
+#    image: aswin3629/portfolio-backend:latest
+#    container_name: portfolio-backend
+#    ports:
+#      - '5000:5000'
+#    environment:
+#      - DATABASE_URL=postgresql://user:pass@db:5432/portfolio
+#    depends_on:
+#      - db
+#    restart: unless-stopped
+#
+#  db:
+#    image: postgres:16-alpine
+#    container_name: portfolio-db
+#    environment:
+#      - POSTGRES_USER=user
+#      - POSTGRES_PASSWORD=pass
+#      - POSTGRES_DB=portfolio
+#    volumes:
+#      - db-data:/var/lib/postgresql/data
+#
+#volumes:
+#  db-data:
