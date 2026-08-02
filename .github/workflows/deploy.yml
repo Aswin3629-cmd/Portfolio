@@ -40,7 +40,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: aswin3629/portfolio-frontend:latest
+          tags: aswin3629/portfolio:latest
 
       # Placeholder for future steps once Kubernetes manifests exist:
       # - name: Deploy to Kubernetes
