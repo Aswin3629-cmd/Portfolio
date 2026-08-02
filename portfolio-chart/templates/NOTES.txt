@@ -1,0 +1,14 @@
+Your portfolio has been deployed!
+
+Application: {{ .Release.Name }}-portfolio
+Ingress host: {{ .Values.ingress.host }}
+
+If your Ingress controller is set up and your hosts file points
+{{ .Values.ingress.host }} at the right IP, visit:
+
+  http://{{ .Values.ingress.host }}
+
+To check status:
+  kubectl get pods
+  kubectl get svc
+  kubectl get ingress

@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+  repository: aswin3629/portfolio
+  tag: latest
+
+service:
+  type: NodePort
+  port: 80
+
+ingress:
+  host: portfolio.test
