@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import { Github, ArrowUpRight } from 'lucide-react'
-
 const projects = [
   {
     title: 'CI/CD Pipeline Flask Application',
@@ -25,9 +24,14 @@ const projects = [
     desc: 'Bash scripts that watch system resources and logs, flagging issues before they become incidents.',
     stack: ['Bash', 'Linux', 'Log Monitoring'],
     href: 'https://github.com/Aswin3629-cmd'
+  },
+  {
+    title: 'RFQ Email Automation (VBA + Outlook API)',
+    desc: 'Automated repetitive supplier RFQ and price-negotiation emailing — batch-sends templated, per-supplier emails with dynamic HTML pricing tables via Outlook COM integration.',
+    stack: ['VBA', 'Outlook API', 'Excel', 'Process Automation'],
+    href: 'https://github.com/Aswin3629-cmd/RFQ-Email-Automation-VBA'
   }
 ]
-
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-28 lg:px-16">
@@ -35,7 +39,6 @@ export default function Projects() {
       <h2 className="mb-12 font-display text-3xl font-bold text-ink-100 sm:text-4xl">
         Things I've shipped
       </h2>
-
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p, i) => (
           <motion.a
